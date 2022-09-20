@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0D9F5FE-0AA2-4A0A-A608-7F4722D0558C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OrderControlMgmt</RootNamespace>
+    <AssemblyName>OrderControlMgmt</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Dapper">
+      <HintPath>..\..\Payroll_draft\Payroll_draft\bin\Debug\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Desktop\SinagSystem\SinagSystem\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Desktop\SinagSystem\SinagSystem\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\Payroll_draft\Payroll_draft\bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\Payroll_draft\Payroll_draft\bin\Debug\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\..\Payroll_draft\Payroll_draft\bin\Debug\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\.nuget\packages\microsoft.office.interop.excel\15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.8.46, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Desktop\SinagSystem\SinagSystem\packages\FreeSpire.XLS.10.1.0\lib\net46\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=6.1.4.2046, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Desktop\SinagSystem\SinagSystem\packages\FreeSpire.XLS.10.1.0\lib\net46\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=10.1.4.61046, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Desktop\SinagSystem\SinagSystem\packages\FreeSpire.XLS.10.1.0\lib\net46\Spire.XLS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\ForecastDetails.cs" />
+    <Compile Include="Class\ForecastLoop.cs" />
+    <Compile Include="Class\PEZA8105Details.cs" />
+    <Compile Include="Class\PODetails.cs" />
+    <Compile Include="Class\POExport.cs" />
+    <Compile Include="Class\POStat.cs" />
+    <Compile Include="Class\SalesInvoiceDetails.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustPO\NewOrder\frmManualPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustPO\NewOrder\frmManualPO.Designer.cs">
+      <DependentUpon>frmManualPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustPO\NewOrder\frmNotMatchedInh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustPO\NewOrder\frmNotMatchedInh.Designer.cs">
+      <DependentUpon>frmNotMatchedInh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustPO\OrderCancel\frmCancelledOrderList_CRUDdetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustPO\OrderCancel\frmCancelledOrderList_CRUDdetails.Designer.cs">
+      <DependentUpon>frmCancelledOrderList_CRUDdetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustPO\OrderList\frmDeleteBatchPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustPO\OrderList\frmDeleteBatchPO.Designer.cs">
+      <DependentUpon>frmDeleteBatchPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustPO\OrderList\frmItemsForReInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustPO\OrderList\frmItemsForReInspection.Designer.cs">
+      <DependentUpon>frmItemsForReInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\frmFCNoInh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\frmFCNoInh.Designer.cs">
+      <DependentUpon>frmFCNoInh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\frmForeCastList_CRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\frmForeCastList_CRUD.Designer.cs">
+      <DependentUpon>frmForeCastList_CRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\frmForeCastList_CRUDdetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\frmForeCastList_CRUDdetails.Designer.cs">
+      <DependentUpon>frmForeCastList_CRUDdetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\frmNewForecast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\frmNewForecast.Designer.cs">
+      <DependentUpon>frmNewForecast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\ImportForecast_FDTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\ImportForecast_FDTP.Designer.cs">
+      <DependentUpon>ImportForecast_FDTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\ImportForecast_GPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\ImportForecast_GPI.Designer.cs">
+      <DependentUpon>ImportForecast_GPI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\ImportForecast_KOUSHIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForeCastList\ImportForecast_KOUSHIN.Designer.cs">
+      <DependentUpon>ImportForecast_KOUSHIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForecastToPO\frmForeCastToPOSolo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForecastToPO\frmForeCastToPOSolo.Designer.cs">
+      <DependentUpon>frmForeCastToPOSolo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForeCast\frmForeCast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForeCast\frmForeCast.Designer.cs">
+      <DependentUpon>frmForeCast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustPO\NewOrder\frmOrderCtrl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustPO\NewOrder\frmOrderCtrl.Designer.cs">
+      <DependentUpon>frmOrderCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\GetData.cs" />
+    <Compile Include="Forms\CustPO\NewOrder\ImportPO_FDTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustPO\NewOrder\ImportPO_FDTP.Designer.cs">
+      <DependentUpon>ImportPO_FDTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustPO\NewOrder\ImportPO_GLORY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustPO\NewOrder\ImportPO_GLORY.Designer.cs">
+      <DependentUpon>ImportPO_GLORY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustPO\NewOrder\ImportPO_KOUSHIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustPO\NewOrder\ImportPO_KOUSHIN.Designer.cs">
+      <DependentUpon>ImportPO_KOUSHIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustPO\OrderList\frmOrderList_CRUDdetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustPO\OrderList\frmOrderList_CRUDdetails.Designer.cs">
+      <DependentUpon>frmOrderList_CRUDdetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustPO\OrderList\frmOrderList_CRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustPO\OrderList\frmOrderList_CRUD.Designer.cs">
+      <DependentUpon>frmOrderList_CRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustPO\OrderCancel\frmCancelledOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustPO\OrderCancel\frmCancelledOrderList.Designer.cs">
+      <DependentUpon>frmCancelledOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForecastCancel\frmCancelledForecastList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForeCast\ForecastCancel\frmCancelledForecastList.Designer.cs">
+      <DependentUpon>frmCancelledForecastList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PEZA\frmAddingNewSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PEZA\frmAddingNewSupplier.Designer.cs">
+      <DependentUpon>frmAddingNewSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PEZA\frmCreateBoatNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PEZA\frmCreateBoatNote.Designer.cs">
+      <DependentUpon>frmCreateBoatNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PEZA\frmCreate8105Doc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PEZA\frmCreate8105Doc.Designer.cs">
+      <DependentUpon>frmCreate8105Doc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PEZA\frmCreate8106Doc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PEZA\frmCreate8106Doc.Designer.cs">
+      <DependentUpon>frmCreate8106Doc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PEZA\frmCreate8112Doc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PEZA\frmCreate8112Doc.Designer.cs">
+      <DependentUpon>frmCreate8112Doc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PEZA\frmLoaManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PEZA\frmLoaManagement.Designer.cs">
+      <DependentUpon>frmLoaManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrintingForms\frmPrint8105.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintingForms\frmPrint8105.designer.cs">
+      <DependentUpon>frmPrint8105.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrintingForms\frmPrintPeza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintingForms\frmPrintPeza.Designer.cs">
+      <DependentUpon>frmPrintPeza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrintingForms\frmPrintSalesInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintingForms\frmPrintSalesInvoice.designer.cs">
+      <DependentUpon>frmPrintSalesInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrintingForms\frmPrintShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintingForms\frmPrintShow.Designer.cs">
+      <DependentUpon>frmPrintShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\P_OStatistic\POStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\P_OStatistic\POStatistics.Designer.cs">
+      <DependentUpon>POStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sales\frmCancelInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sales\frmCancelInvoice.Designer.cs">
+      <DependentUpon>frmCancelInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sales\frmSalesInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sales\frmSalesInvoice.Designer.cs">
+      <DependentUpon>frmSalesInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sales\frmSalesEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sales\frmSalesEntry.Designer.cs">
+      <DependentUpon>frmSalesEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sales\frmSalesRecordDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sales\frmSalesRecordDetails.Designer.cs">
+      <DependentUpon>frmSalesRecordDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sales\frmSalesRecordList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sales\frmSalesRecordList.Designer.cs">
+      <DependentUpon>frmSalesRecordList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Class\Variables.cs" />
+    <Compile Include="Reports\BoatNote.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BoatNote.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PEZA-8105.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEZA-8105.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PEZA-8106.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEZA-8106.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PEZA-8112-Long.cs">
+      <DependentUpon>PEZA-8112-Long.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\PEZA-8112.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEZA-8112.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SalesInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustPO\NewOrder\frmManualPO.resx">
+      <DependentUpon>frmManualPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustPO\NewOrder\frmNotMatchedInh.resx">
+      <DependentUpon>frmNotMatchedInh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustPO\OrderCancel\frmCancelledOrderList_CRUDdetails.resx">
+      <DependentUpon>frmCancelledOrderList_CRUDdetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustPO\OrderList\frmDeleteBatchPO.resx">
+      <DependentUpon>frmDeleteBatchPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustPO\OrderList\frmItemsForReInspection.resx">
+      <DependentUpon>frmItemsForReInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForeCast\ForeCastList\frmFCNoInh.resx">
+      <DependentUpon>frmFCNoInh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForeCast\ForeCastList\frmForeCastList_CRUD.resx">
+      <DependentUpon>frmForeCastList_CRUD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForeCast\ForeCastList\frmForeCastList_CRUDdetails.resx">
+      <DependentUpon>frmForeCastList_CRUDdetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForeCast\ForeCastList\frmNewForecast.resx">
+      <DependentUpon>frmNewForecast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForeCast\ForeCastList\ImportForecast_FDTP.resx">
+      <DependentUpon>ImportForecast_FDTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForeCast\ForeCastList\ImportForecast_GPI.resx">
+      <DependentUpon>ImportForecast_GPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForeCast\ForeCastList\ImportForecast_KOUSHIN.resx">
+      <DependentUpon>ImportForecast_KOUSHIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForeCast\ForecastToPO\frmForeCastToPOSolo.resx">
+      <DependentUpon>frmForeCastToPOSolo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForeCast\frmForeCast.resx">
+      <DependentUpon>frmForeCast.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustPO\NewOrder\frmOrderCtrl.resx">
+      <DependentUpon>frmOrderCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustPO\NewOrder\ImportPO_FDTP.resx">
+      <DependentUpon>ImportPO_FDTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustPO\NewOrder\ImportPO_GLORY.resx">
+      <DependentUpon>ImportPO_GLORY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustPO\NewOrder\ImportPO_KOUSHIN.resx">
+      <DependentUpon>ImportPO_KOUSHIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustPO\OrderList\frmOrderList_CRUDdetails.resx">
+      <DependentUpon>frmOrderList_CRUDdetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustPO\OrderList\frmOrderList_CRUD.resx">
+      <DependentUpon>frmOrderList_CRUD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustPO\OrderCancel\frmCancelledOrderList.resx">
+      <DependentUpon>frmCancelledOrderList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForeCast\ForecastCancel\frmCancelledForecastList.resx">
+      <DependentUpon>frmCancelledForecastList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PEZA\frmAddingNewSupplier.resx">
+      <DependentUpon>frmAddingNewSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PEZA\frmCreateBoatNote.resx">
+      <DependentUpon>frmCreateBoatNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PEZA\frmCreate8105Doc.resx">
+      <DependentUpon>frmCreate8105Doc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PEZA\frmCreate8106Doc.resx">
+      <DependentUpon>frmCreate8106Doc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PEZA\frmCreate8112Doc.resx">
+      <DependentUpon>frmCreate8112Doc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PEZA\frmLoaManagement.resx">
+      <DependentUpon>frmLoaManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrintingForms\frmPrint8105.resx">
+      <DependentUpon>frmPrint8105.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrintingForms\frmPrintPeza.resx">
+      <DependentUpon>frmPrintPeza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrintingForms\frmPrintSalesInvoice.resx">
+      <DependentUpon>frmPrintSalesInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrintingForms\frmPrintShow.resx">
+      <DependentUpon>frmPrintShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\P_OStatistic\POStatistics.resx">
+      <DependentUpon>POStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sales\frmCancelInvoice.resx">
+      <DependentUpon>frmCancelInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sales\frmSalesInvoice.resx">
+      <DependentUpon>frmSalesInvoice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sales\frmSalesEntry.resx">
+      <DependentUpon>frmSalesEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sales\frmSalesRecordDetails.resx">
+      <DependentUpon>frmSalesRecordDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sales\frmSalesRecordList.resx">
+      <DependentUpon>frmSalesRecordList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\BoatNote.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BoatNote.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PEZA-8105.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PEZA-8105.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PEZA-8106.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PEZA-8106.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PEZA-8112-Long.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PEZA-8112-Long.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PEZA-8112.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PEZA-8112.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\OrderControlMgmt.Class.ForecastDetails.datasource" />
+    <None Include="Properties\DataSources\OrderControlMgmt.Class.ImportPO.datasource" />
+    <None Include="Properties\DataSources\OrderControlMgmt.Class.PODetails.datasource" />
+    <None Include="Properties\DataSources\OrderControlMgmt.Class.SalesInvoiceDetails.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CustomMessageBox\CustomMessageBox\CustomMessageBox.csproj">
+      <Project>{6a02d358-aac4-43f5-a300-8c4604eff037}</Project>
+      <Name>CustomMessageBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UserAccessControl\UserAccessControl\UserAccessControl.csproj">
+      <Project>{7d984698-a6ff-4d9a-8742-391e2267d836}</Project>
+      <Name>UserAccessControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-no-image-50.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\SinagSystem\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\SinagSystem\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\SinagSystem\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\SinagSystem\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+</Project>
